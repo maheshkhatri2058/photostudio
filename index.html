@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-blue-600 text-white shadow-md text-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">PhotoStudio</h1>
+      <nav class="hidden md:flex space-x-6 text-md">
+        <a href="#" class="hover:text-yellow-400">HOME</a>
+        <a href="#features" class="hover:text-yellow-400">SERVICES</a>
+        <a href="#contact" class="hover:text-yellow-400">CONTACT</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="#" class="block hover:text-yellow-400">Home</a>
+      <a href="#features" class="block hover:text-yellow-400">Services</a>
+      <a href="#contact" class="block hover:text-yellow-400">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col justify-center items-center bg-gray-900 text-white text-center py-20 lg:h-screen">
+    <h2 class="text-4xl font-bold mb-4">तपाईंको हरेक मूल्यवान पललाई फ्रेममा सुरक्षित बनाउँछौं</h2>
+    <p class="text-lg mb-6">Professional photography for weddings, portraits, and events.</p>
+    <a href="#contact" class="bg-pink-400 text-black px-6 py-2 rounded hover:bg-yellow-300 font-semibold">Book Now</a>
+  </section>
+
+  <!-- Features / Services -->
+  <section id="features" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-12">Our Services</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <img src="./img/wed2.jpg" class="mx-auto mb-4" alt="Wedding Shoot" height="">
+          <h3 class="text-xl font-semibold mb-2">Wedding Photography</h3>
+          <p>Capture the most special day of your life with our artistic wedding photography services.</p>
+          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</button>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <img src="/img/wed1.jpg" class="mx-auto mb-4" alt="Portraits">
+          <h3 class="text-xl font-semibold mb-2">Portrait Sessions</h3>
+          <p>Professional portrait photography for individuals, couples, and families in our studio or outdoors.</p>
+          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</button>
+
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <img src="/img/event.jpg" class="mx-auto mb-4" alt="Event Photography">
+          <h3 class="text-xl font-semibold mb-2">Event Coverage</h3>
+          <p>We cover all types of events including corporate, birthdays, and private parties with style and precision.</p>
+          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- location section  -->
+  <section class="flex justify-around py-16 bg-gray-100">
+
+    <div>
+        <h2>Send us Message</h2>
+        <div class=" items-center py-6">
+           <input type="text" placeholder="Enter Your Name" class="border p-2 mb-4 w-full rounded-md">
+           <input type="text" placeholder="Enter Your email/Contact No" class="border p-2 mb-4 w-full rounded-md">
+           <textarea placeholder="Enter Your Message" class="border p-2 mb-4 w-full rounded-md"></textarea>
+           <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Send</button>
+        </div>
+
+        
+    </div>
+    <div>
+        <h2 class="text-xl text-center font-semibold">Check our Location</h2>
+    <div class=" flex  items-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d545.3667498641499!2d80.27288635820739!3d28.941984564217005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1af63b583b2d1%3A0xfeda463290591b17!2sTej%20Digital%20Studio!5e0!3m2!1sen!2sin!4v1747156423973!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+    
+
+
+  </section>
+
+  <!-- Contact / Footer -->
+ <footer class="bg-black text-white pt-10 pb-6">
+  <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm md:text-base">
+    
+    <!-- Contact Us -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+      <p class="flex items-center mb-2">
+        <svg class="w-5 h-5 mr-2 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm4 3v2h12V7H6zm0 4v2h12v-2H6zm0 4v2h12v-2H6z" />
+        </svg>
+        lalit200@gmail.com
+      </p>
+      <p class="flex items-center mb-1">
+        <svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 5a2 2 0 012-2h1.4a1 1 0 01.93.63l1.13 2.67a1 1 0 01-.21 1.09l-1.25 1.26a11.02 11.02 0 005.5 5.5l1.26-1.25a1 1 0 011.09-.21l2.67 1.13a1 1 0 01.63.93V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
+        </svg>
+        97798256365
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">About Us</a></li>
+        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+        <li><a href="#" class="hover:underline">Privacy</a></li>
+        <li><a href="#" class="hover:underline">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+      <p class="mb-4">Stay in touch with us</p>
+      <div class="flex space-x-4">
+        <!-- Facebook -->
+        <a href="#" target="_blank" class="bg-white rounded-full p-2 hover:bg-gray-300">
+          <svg class="w-5 h-5 text-purple-700" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33v7.03C18.34 21.25 22 17.09 22 12.07z" />
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" target="_blank" class="bg-white rounded-full p-2 hover:bg-gray-300">
+          <svg class="w-5 h-5 text-purple-700" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M7 2C4.79 2 3 3.79 3 6v12c0 2.21 1.79 4 4 4h10c2.21 0 4-1.79 4-4V6c0-2.21-1.79-4-4-4H7zm0 2h10c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" />
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="#" target="_blank" class="bg-white rounded-full p-2 hover:bg-gray-300">
+          <svg class="w-5 h-5 text-purple-700" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M19.6 3H4.4C3.6 3 3 3.6 3 4.4v15.2C3 20.4 3.6 21 4.4 21h15.2c.8 0 1.4-.6 1.4-1.4V4.4C21 3.6 20.4 3 19.6 3zM10 15V9l6 3-6 3z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8 text-center text-gray-400 border-t border-gray-700 pt-4 text-sm">
+    Copyright © <span id="time"></span> All rights reserved |
+    Design and Developed by <span class="text-gray-400 font-medium">Mahesh Khatri</span>
+  </div>
+</footer>
+
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    let date=new Date();
+    let year=date.getFullYear();
+    document.getElementById("time").innerHTML=year;
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+
+    });
+  </script>
+
+</body>
+</html>
