@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Photo Studio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #gallery img {
+      width: 100%;
+      height: 450px;
+  
+    }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+</style>
+
 </head>
 <body class="bg-white text-gray-800">
 
@@ -36,7 +58,8 @@
 
   <!-- Hero Section -->
   <section class="flex flex-col justify-center items-center bg-gray-900 text-white text-center py-20 lg:h-screen">
-    <h2 class="text-4xl font-bold mb-4">तपाईंको हरेक मूल्यवान पललाई फ्रेममा सुरक्षित बनाउँछौं</h2>
+    <h2 class="text-4xl font-bold mb-4 fade-in-up">तपाईंको हरेक मूल्यवान पललाई फ्रेममा सुरक्षित बनाउँछौं</h2>
+
     <p class="text-lg mb-6">Professional photography for weddings, portraits, and events.</p>
     <a href="#contact" class="bg-pink-400 text-black px-6 py-2 rounded hover:bg-yellow-300 font-semibold">Book Now</a>
   </section>
@@ -69,30 +92,46 @@
       </div>
     </div>
   </section>
+  <!-- Gallery Section -->
+<section class="bg-white py-16">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8">Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="gallery">
+      <img src="/img/img1.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img2.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img3.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img4.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img5.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img6.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</section>
   <!-- location section  -->
-  <section class="flex justify-around py-16 bg-gray-100">
+ <section class="flex flex-col lg:flex-row justify-around items-center py-16 bg-gray-100 gap-10 px-6 sm:px-10">
+  <!-- Contact Form -->
+  <div class="w-full lg:w-1/2 bg-white shadow-lg rounded-xl p-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Send us a Message</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Enter Your Name" class="border border-gray-300 p-3 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <input type="text" placeholder="Enter Your Email or Contact No" class="border border-gray-300 p-3 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <textarea placeholder="Enter Your Message" rows="5" class="border border-gray-300 p-3 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-500 transition duration-300">Send</button>
+    </form>
+  </div>
 
-    <div>
-        <h2>Send us Message</h2>
-        <div class=" items-center py-6">
-           <input type="text" placeholder="Enter Your Name" class="border p-2 mb-4 w-full rounded-md">
-           <input type="text" placeholder="Enter Your email/Contact No" class="border p-2 mb-4 w-full rounded-md">
-           <textarea placeholder="Enter Your Message" class="border p-2 mb-4 w-full rounded-md"></textarea>
-           <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Send</button>
-        </div>
-
-        
+  <!-- Google Maps Section -->
+  <div class="w-full lg:w-1/2">
+    <h2 class="text-xl font-semibold text-center mb-4">Check our Location</h2>
+    <div class="flex justify-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d545.3667498641499!2d80.27288635820739!3d28.941984564217005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1af63b583b2d1%3A0xfeda463290591b17!2sTej%20Digital%20Studio!5e0!3m2!1sen!2sin!4v1747156423973!5m2!1sen!2sin"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-md"></iframe>
     </div>
-    <div>
-        <h2 class="text-xl text-center font-semibold">Check our Location</h2>
-    <div class=" flex  items-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d545.3667498641499!2d80.27288635820739!3d28.941984564217005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1af63b583b2d1%3A0xfeda463290591b17!2sTej%20Digital%20Studio!5e0!3m2!1sen!2sin!4v1747156423973!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    </div>
-    
+  </div>
+</section>
 
 
-  </section>
+
 
   <!-- Contact / Footer -->
  <footer class="bg-black text-white pt-10 pb-6">
