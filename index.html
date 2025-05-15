@@ -8,11 +8,17 @@
   <style>
     #gallery img {
       width: 100%;
-      height: 450px;
+      height: auto;
   
+    }
+    #bnr{
+      background-image: url('./img/bnr.jpg');
+      background-size: cover;
+      background-position: center;
     }
   @keyframes fadeInUp {
     0% {
+
       opacity: 0;
       transform: translateY(30px);
     }
@@ -31,13 +37,16 @@
 <body class="bg-white text-gray-800">
 
   <!-- Navbar -->
-  <header class="bg-blue-600 text-white shadow-md text-md">
+  <header class="bg-blue-600 text-white shadow-md text-xl">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">PhotoStudio</h1>
-      <nav class="hidden md:flex space-x-6 text-md">
+        <img src="./img/logo.png" alt="Logo" class="h-14 mr-2">
+  
+      <nav class="hidden md:flex space-x-6 text-xl">
         <a href="#" class="hover:text-yellow-400">HOME</a>
         <a href="#features" class="hover:text-yellow-400">SERVICES</a>
         <a href="#contact" class="hover:text-yellow-400">CONTACT</a>
+          <button class=" bg-blue-600 text-white rounded hover:bg-blue-500"><a href="https://wa.link/h1rl4h">BOOK NOW</a></button>
+
       </nav>
       <div class="md:hidden">
         <button id="menu-toggle" class="focus:outline-none">
@@ -53,56 +62,94 @@
       <a href="#" class="block hover:text-yellow-400">Home</a>
       <a href="#features" class="block hover:text-yellow-400">Services</a>
       <a href="#contact" class="block hover:text-yellow-400">Contact</a>
+     <button class=" bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500"><a href="https://wa.link/h1rl4h">Book Now</a></button>
+
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="flex flex-col justify-center items-center bg-gray-900 text-white text-center py-20 lg:h-screen">
-    <h2 class="text-4xl font-bold mb-4 fade-in-up">तपाईंको हरेक मूल्यवान पललाई फ्रेममा सुरक्षित बनाउँछौं</h2>
+  <section
+  id="bnr"
+  class="relative bg-fixed bg-center bg-cover text-white text-center py-32 lg:h-screen px-4 flex flex-col justify-center items-center"
+  style="background-image: url('/img/bnr.jpg');"
+>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-    <p class="text-lg mb-6">Professional photography for weddings, portraits, and events.</p>
-    <a href="#contact" class="bg-pink-400 text-black px-6 py-2 rounded hover:bg-yellow-300 font-semibold">Book Now</a>
-  </section>
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight animate-fade-in-up drop-shadow-lg">
+      तपाईंको हरेक मूल्यवान पललाई <br class="hidden md:block" />
+      फ्रेममा सुरक्षित बनाउँछौं
+    </h2>
+
+    <p class="text-lg md:text-xl mb-8 text-gray-200 animate-fade-in-up delay-200">
+      Professional photography for weddings, portraits, and events. Capture memories that last a lifetime.
+    </p>
+
+    <a
+      href="https://wa.link/h1rl4h"
+      class="inline-flex items-center gap-2 bg-pink-500 hover:bg-yellow-400 text-black px-8 py-3 rounded-full text-lg font-semibold shadow-xl transition duration-300 animate-bounce"
+    >
+      📸 Book Now
+    </a>
+  </div>
+</section>
+
 
   <!-- Features / Services -->
-  <section id="features" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-12">Our Services</h2>
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <img src="./img/wed2.jpg" class="mx-auto mb-4" alt="Wedding Shoot" height="">
-          <h3 class="text-xl font-semibold mb-2">Wedding Photography</h3>
-          <p>Capture the most special day of your life with our artistic wedding photography services.</p>
-          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</button>
-        </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <img src="/img/wed1.jpg" class="mx-auto mb-4" alt="Portraits">
-          <h3 class="text-xl font-semibold mb-2">Portrait Sessions</h3>
-          <p>Professional portrait photography for individuals, couples, and families in our studio or outdoors.</p>
-          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</button>
-
-        </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <img src="/img/event.jpg" class="mx-auto mb-4" alt="Event Photography">
-          <h3 class="text-xl font-semibold mb-2">Event Coverage</h3>
-          <p>We cover all types of events including corporate, birthdays, and private parties with style and precision.</p>
-          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</button>
-
-        </div>
+  <section id="features" class="py-20 bg-gradient-to-b from-gray-100 to-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-16 text-gray-800">Our Services</h2>
+    
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+        <img src="./img/img9.jpg" alt="Wedding Shoot" class="mx-auto mb-6 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300">
+        <h3 class="text-2xl font-semibold mb-3 text-gray-800">Wedding Photography</h3>
+        <p class="text-gray-600">Capture the most special day of your life with our artistic wedding photography services.</p>
+        <a href="https://wa.link/h1rl4h" class="inline-block mt-5 bg-pink-500 hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full transition duration-300 shadow-md">
+        Book Now
+        </a>
       </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+        <img src="/img/img4.jpg" alt="Portraits" class="mx-auto mb-6 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300">
+        <h3 class="text-2xl font-semibold mb-3 text-gray-800">Portrait Sessions</h3>
+        <p class="text-gray-600">Professional portrait photography for individuals, couples, and families in our studio or outdoors.</p>
+        <a href="https://wa.link/h1rl4h" class="inline-block mt-5 bg-pink-500 hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full transition duration-300 shadow-md">
+          Book Now
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+        <img src="/img/img94.JPG" alt="Event Photography" class="mx-auto mb-6 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300">
+        <h3 class="text-2xl font-semibold mb-3 text-gray-800">Event Coverage</h3>
+        <p class="text-gray-600">We cover all types of events including corporate, birthdays, and private parties with style and precision.</p>
+        <a href="https://wa.link/h1rl4h" class="inline-block mt-5 bg-pink-500 hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full transition duration-300 shadow-md">
+           Book Now
+        </a>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
   <!-- Gallery Section -->
 <section class="bg-white py-16">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-8">Gallery</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="gallery">
-      <img src="/img/img1.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
       <img src="/img/img2.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-      <img src="/img/img3.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-      <img src="/img/img4.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
       <img src="/img/img5.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-      <img src="/img/img6.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img7.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img10.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/im3.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <img src="/img/img9.jpg" alt="Gallery Image" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+
     </div>
   </div>
 </section>
@@ -144,7 +191,7 @@
         <svg class="w-5 h-5 mr-2 text-white" fill="currentColor" viewBox="0 0 24 24">
           <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm4 3v2h12V7H6zm0 4v2h12v-2H6zm0 4v2h12v-2H6z" />
         </svg>
-        lalit200@gmail.com
+        tejdigitalphotography@gmail.com
       </p>
       <p class="flex items-center mb-1">
         <svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" stroke-width="2"
@@ -152,8 +199,17 @@
           <path stroke-linecap="round" stroke-linejoin="round"
             d="M3 5a2 2 0 012-2h1.4a1 1 0 01.93.63l1.13 2.67a1 1 0 01-.21 1.09l-1.25 1.26a11.02 11.02 0 005.5 5.5l1.26-1.25a1 1 0 011.09-.21l2.67 1.13a1 1 0 01.63.93V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
         </svg>
-        97798256365
+      9805745779/9801388808
       </p>
+      <p class="flex items-center mb-1">
+  <svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" stroke-width="2"
+    viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M17.657 16.657L13.414 12.414a4 4 0 10-5.656 5.656l4.243 4.243a2 2 0 002.828 0l2.828-2.828a2 2 0 000-2.828zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+   Daijee 10400 mahendra highway, Nepal
+</p>
+
     </div>
 
     <!-- Quick Links -->
@@ -173,7 +229,7 @@
       <p class="mb-4">Stay in touch with us</p>
       <div class="flex space-x-4">
         <!-- Facebook -->
-        <a href="#" target="_blank" class="bg-white rounded-full p-2 hover:bg-gray-300">
+        <a href="https://www.facebook.com/share/16EhqmnanH/" target="_blank" class="bg-white rounded-full p-2 hover:bg-gray-300">
           <svg class="w-5 h-5 text-purple-700" fill="currentColor" viewBox="0 0 24 24">
             <path
               d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33v7.03C18.34 21.25 22 17.09 22 12.07z" />
